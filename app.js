@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const stuffRoutes = require('./routes/stuff');
 const userRoutes = require('./routes/user');
+const path = require('path');
 const app = express();
 
 mongoose.connect('mongodb+srv://Haznow:yTblFrQ9zuR8K5U7@cluster0.tedyh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
@@ -23,6 +24,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 //Appelle les routes a executer
+app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
 

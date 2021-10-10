@@ -1,0 +1,9 @@
+// Database Access  
+
+name : Haznow
+Password : yTblFrQ9zuR8K5U7 
+
+//Compte site go-fullstack partie 3
+
+email : haddouamine2002@gmail.com
+Password : 1234
